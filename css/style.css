@@ -1,0 +1,320 @@
+/* Базові стилі */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3e9ff;
+  display: flex;
+  justify-content: center;
+}
+
+/* Імітація мобільного екрану */
+.app {
+  width: 420px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-radius: 32px;
+  margin: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Шапка */
+header {
+  background: #6a1b9a; /* твій фіолетовий */
+  color: #ffffff;
+  padding: 16px 20px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-wrap img {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-actions button {
+  border: none;
+  background: #ffffff;
+  color: #6a1b9a;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Верхня навігація */
+nav {
+  margin-top: 6px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fceeff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+nav a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Hero-блок */
+.hero {
+  margin-top: 10px;
+  background: #7b29b3;
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hero-text h1 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.hero-note {
+  width: 100px;
+  height: 90px;
+  border-radius: 10px;
+  background: #f5f5ff;
+  position: relative;
+}
+
+.hero-note::before,
+.hero-note::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 6px;
+  background: #ffcc66;
+  top: 6px;
+  border-radius: 4px;
+}
+
+.hero-note::before {
+  left: 10px;
+}
+
+.hero-note::after {
+  right: 10px;
+}
+
+/* Основний контент */
+main {
+  padding: 16px 20px 80px;
+}
+
+/* Блок: рекомендовані події */
+.section-title {
+  font-size: 16px;
+  margin: 12px 0 8px;
+}
+
+.events-list {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.event-item {
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+}
+
+.event-item:last-child {
+  border-bottom: none;
+}
+
+.event-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.event-meta {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.event-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e0f7fa;
+  color: #007c91;
+}
+
+.btn-outline {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #6a1b9a;
+  background: #ffffff;
+  color: #6a1b9a;
+  cursor: pointer;
+}
+
+/* Блок: сплануйте свої події */
+.plan-block {
+  margin-top: 20px;
+  background: #f8f4ff;
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.plan-block p {
+  margin: 0 0 12px;
+  font-size: 13px;
+}
+
+.btn-primary {
+  border: none;
+  background: #26c6da;
+  color: #ffffff;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* Контент інших сторінок */
+.page-title {
+  font-size: 20px;
+  margin: 10px 0 12px;
+}
+
+.text-block p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Список подій на окремих сторінках */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  padding: 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.card p {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+
+/* Форма (контакти, логін, реєстрація) */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 13px;
+}
+
+input, textarea {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-form {
+  align-self: flex-start;
+}
+
+/* Нижня навігація */
+footer {
+  margin-top: auto;
+  border-top: 1px solid #eee;
+  padding: 8px 10px;
+  background: #ffffff;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #6a1b9a;
+}
+
+.footer-nav a span {
+  font-size: 11px;
+  display: block;
+}
